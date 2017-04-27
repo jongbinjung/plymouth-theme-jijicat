@@ -16,15 +16,15 @@ Install and activate as per any Plymouth theme on AUR. To summarise:
 
     $ makepkg -si
 
-4 - verify successful installation - it should be listed as "jijicat" in the list:
+3 - verify successful installation - it should be listed as "jijicat" in the list:
 
     $ plymouth-set-default-theme -l
 
-5 - set theme as default - this will also rebuild the kernel as required:
+4 - set theme as default - this will also rebuild the kernel as required:
 
     $ sudo plymouth-set-default-theme -R jijicat
 
-6 - reboot and melt at the cuteness (or fix if you broke something - I'm not responsible)!
+5 - reboot and melt at the cuteness (or fix if you broke something - I'm not responsible)!
 
     $ sudo systemctl reboot
 
