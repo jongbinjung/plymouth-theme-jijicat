@@ -1,39 +1,40 @@
 
-# plymouth-theme-jijicat
+# Plymouth Theme: JiJi Cat - Arch Linux
 
 This is a Plymouth theme for Arch Linux featuring an adorable cat somewhat like JiJi from "KiKi's Delivery Service" >^.^<
 
-# installation
+# Installation
 
 Install and activate as per any Plymouth theme on AUR. To summarise:
 
-1 - clone this repository into a temporary folder:
+1 - clone this repository into a temporary folder and enter it:
 
     $ git clone https://github.com/Cynthetika/plymouth-theme-jijicat.git
+    $ cd ./plymouth-theme-jijicat
     
-2 - make ABS package and pull in any dependencies:
+2 - make ABS package and install it:
 
-    $ makepkg -s
+    $ makepkg -si
 
-3 - install with pacman
-
-    $ sudo pacman -U /path/to/created/package.pkg
-
-4 - verify successful installation
+4 - verify successful installation - it should be listed as "jijicat" in the list:
 
     $ plymouth-set-default-theme -l
 
-5 - set theme as default - this will also rebuild the kernel as required
+5 - set theme as default - this will also rebuild the kernel as required:
 
     $ sudo plymouth-set-default-theme -R jijicat
 
-6 - reboot and melt at the cuteness (or fix if you broke something - I'm not responsible)
+6 - reboot and melt at the cuteness (or fix if you broke something - I'm not responsible)!
 
     $ sudo systemctl reboot
 
 
-# original source
+
+
+# Acknowledgement
 
 The images were taken from a visually identical plymouth theme for Ubuntu:
 
     https://github.com/krishnan793/PlymouthTheme-Cat
+
+Danke schön!

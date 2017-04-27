@@ -1,14 +1,16 @@
 
 /* begins teh kitteh */
-Window.SetBackgroundTopColor    (0.086, 0.086, 0.086);
-Window.SetBackgroundBottomColor (0.086, 0.086, 0.086);
+
+// sets background colour to match images
+Window.SetBackgroundTopColor    (0.08627450980392157, 0.08627450980392157, 0.08627450980392157);
+Window.SetBackgroundBottomColor (0.08627450980392157, 0.08627450980392157, 0.08627450980392157);
 
 progress = 0;
 
 progress_box.image = Image("progress-" + progress + ".png");
 progress_box.sprite = Sprite();
 progress_box.x = Window.GetWidth() / 2 - progress_box.image.GetWidth()  / 2;  // centres cat horizontally
-progress_box.y = Window.GetHeight() * 0.75 - progress_box.image.GetHeight() / 2; // centres cat vertically
+progress_box.y = Window.GetHeight() / 2 - progress_box.image.GetHeight() / 2; // centres cat vertically
 progress_box.sprite.SetPosition(progress_box.x, progress_box.y, 0);
 progress_box.sprite.SetImage(progress_box.image);
 

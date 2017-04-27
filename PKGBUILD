@@ -1,14 +1,14 @@
 # Maintainer: Cynthia Weyrauch <cynthetika@gmail.com>
 pkgname='plymouth-theme-jijicat'
-pkgver=1
+pkgver=1.0
 pkgrel=1
 pkgdesc='Plymouth theme of a cute cat somewhat like Jiji from the Miyazaki film'
 arch=('any')
 url='https://github.com/Cynthetika/plymouth-theme-jijicat'
 license=('GPL3')
 depends=('plymouth')
-source=('plymouth-theme-jijicat.tar.gz')
-md5sums=('360726fe463b053424548c82e315ed10')
+source=("https://github.com/Cynthetika/plymouth-theme-jijicat/releases/download/$pkgver/$pkgname.tar.gz")
+md5sums=('d8772b5662638e880acf219e5ebd14d6')
 
 package() {
   cd "$srcdir/jijicat"
