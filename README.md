@@ -1,33 +1,39 @@
-# PlymouthTheme-Cat
-This is a Plymouth theme created for Ubuntu 16.04 (can be also used in other Linux Distributions).
 
-[![Video](https://4.bp.blogspot.com/-gG0MBGjEE9M/WBYXrOGrVGI/AAAAAAAABVE/auGpLRYf7jor4hu3jurYGcjaVBapHyAVACLcB/s320/8998adc40112985a8f29cf414925d390.gif)](https://www.youtube.com/watch?v=c6f478VBhtE)
+# plymouth-theme-jijicat
 
+This is a Plymouth theme for Arch Linux featuring an adorable cat somewhat like JiJi from "KiKi's Delivery Service" >^.^<
 
-[Video] https://www.youtube.com/watch?v=c6f478VBhtE
+# installation
 
-[Blog] http://eionix.blogspot.in/2016/10/plymouth-theme-for-ubuntu.html
+Install and activate as per any Plymouth theme on AUR. To summarise:
 
-# Installation
+1 - clone this repository into a temporary folder:
 
-    cd /usr/share/plymouth/themes/
-
-Clone this repository.
-
-    sudo git clone https://github.com/krishnan793/PlymouthTheme-Cat.git
+    $ git clone https://github.com/Cynthetika/plymouth-theme-jijicat.git
     
-Install the theme.
+2 - make ABS package and pull in any dependencies:
 
-    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/PlymouthTheme-Cat/eionix-cat.plymouth 100
+    $ makepkg -s
 
-Select the default theme.
+3 - install with pacman
 
-    sudo update-alternatives --config default.plymouth
+    $ sudo pacman -U /path/to/created/package.pkg
 
-Update the initramfs image.
+4 - verify successful installation
 
-    sudo update-initramfs -u
+    $ plymouth-set-default-theme -l
 
-Now reboot.
+5 - set theme as default - this will also rebuild the kernel as required
 
-If you want to install this on < Ubuntu 16.04, change the path from /usr/share/plymouth to /lib/plymouth/ . You need to do this on the eionix-cat.plymouth file also.
+    $ sudo plymouth-set-default-theme -R jijicat
+
+6 - reboot and melt at the cuteness (or fix if you broke something - I'm not responsible)
+
+    $ sudo systemctl reboot
+
+
+# original source
+
+The images were taken from a visually identical plymouth theme for Ubuntu:
+
+    https://github.com/krishnan793/PlymouthTheme-Cat

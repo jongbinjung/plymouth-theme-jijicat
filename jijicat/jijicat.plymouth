@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=JiJi the Cat
+Description=Cute cat somewhat like Jiji from the Miyazaki film
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/jijicat
+ScriptFile=/usr/share/plymouth/themes/jijicat/jijicat.script
