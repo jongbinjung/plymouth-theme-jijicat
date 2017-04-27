@@ -5,6 +5,7 @@
 Window.SetBackgroundTopColor    (0.08627450980392157, 0.08627450980392157, 0.08627450980392157);
 Window.SetBackgroundBottomColor (0.08627450980392157, 0.08627450980392157, 0.08627450980392157);
 
+loop = 0;
 progress = 0;
 
 progress_box.image = Image("progress-" + progress + ".png");
@@ -18,8 +19,16 @@ progress_box.sprite.SetImage(progress_box.image);
 /* function called by Plymouth at 50Hz */
 fun refresh ()
   {
-    progress++;
-
+    if (loop==0)
+    {
+		progress++;
+		loop++;
+	}
+	else
+	{
+		loop = 0;
+	}
+    
     if (progress >= 110)
     progress = 0;
 
